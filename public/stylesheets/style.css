@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'Gloock Regular';
+  src: url('/fonts/gloock_ff/Gloock-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('/fonts/montserrat_ff/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url('/fonts/montserrat_ff/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+:root {
+  /* typography */
+
+  --globalFf: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+  --sectionHeadingFf: 'Montserrat SemiBold', Arial, Helvetica, sans-serif;
+  --mainHeadingFf: 'Gloock Regular', 'Times New Roman', Times, serif;
+}
+
 body {
   padding: 50px;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
@@ -5,6 +30,18 @@ body {
 
 a {
   color: #00b7ff;
+}
+
+h1 {
+  font-family: var(--mainHeadingFf);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--sectionHeadingFf);
 }
 
 .login {
