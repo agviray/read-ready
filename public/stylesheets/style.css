@@ -1,3 +1,15 @@
+/* Breakpoints */
+
+/*
+
+sm: 640px
+md: 768px
+lg: 1024
+xl: 1280px
+2xl: 1536px
+
+*/
+
 @font-face {
   font-family: 'Gloock Regular';
   src: url('/fonts/gloock_ff/Gloock-Regular.ttf') format('truetype');
@@ -16,11 +28,20 @@
 }
 
 :root {
-  /* typography */
+  /* Typography/Fonts */
 
   --globalFf: 'Montserrat Regular', Arial, Helvetica, sans-serif;
   --sectionHeadingFf: 'Montserrat SemiBold', Arial, Helvetica, sans-serif;
   --mainHeadingFf: 'Gloock Regular', 'Times New Roman', Times, serif;
+
+  /* Colors */
+
+  --midBlack: #333333;
+  --offwhite: #f9f9f9;
+  --brightGreen: #35ff8b;
+  --lightGrayBlue: #f1f2f7;
+  --midGrayBlue: #8b9cc4;
+  --darkBlue: #2a2f3d;
 }
 
 body {
