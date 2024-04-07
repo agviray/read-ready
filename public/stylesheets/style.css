@@ -47,7 +47,10 @@ xl: 1280px
 
   /* Widths, Heights */
   --maxWidthContent: 1200px;
+  --headerHeight: 50px;
 }
+
+/* Base Styles */
 
 * {
   margin: 0;
@@ -58,6 +61,11 @@ xl: 1280px
 body {
   color: var(--lightBlack);
   font-family: var(--globalFf);
+}
+
+header {
+  position: relative;
+  height: var(--headerHeight);
 }
 
 a {
@@ -85,38 +93,10 @@ h6 {
   font-family: var(--sectionHeadingFf);
 }
 
-/* main {
-  max-width: var(--maxWidthContent);
-} */
-
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
-}
-
-.login img {
-  height: 30px;
-}
+/* Utility Styles  */
 
 .max-content-centered {
   max-width: var(--maxWidthContent);
   margin: 0 auto;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.logo {
-  display: inline-block;
-}
-
-nav > ul {
-  display: inline-flex;
-  align-items: center;
+  padding: 0 1rem;
 }

@@ -1,0 +1,41 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: inherit;
+}
+
+nav .inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+nav .logo {
+  display: inline-block;
+  font-size: 25px;
+  font-family: var(--mainHeadingFf);
+}
+
+nav .logo a {
+  color: var(--darkBlack);
+}
+
+nav > ul {
+  display: inline-flex;
+  align-items: center;
+}
+
+nav .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+nav .login img {
+  height: 30px;
+}
