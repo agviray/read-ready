@@ -14,28 +14,167 @@ nav .inner-container {
   height: inherit;
 }
 
+nav .left-side {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav .hamburger {
+  padding: 0.5rem;
+  z-index: 4;
+}
+
+@media screen and (min-width: 950px) {
+  nav .hamburger {
+    display: none;
+  }
+}
+
+nav .hamburger:hover {
+  cursor: pointer;
+}
+
+nav .hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px 0;
+  background-color: var(--offwhite);
+  transform: translateY(0);
+  transition: all 0.2s ease;
+}
+
+nav .hamburger.active span {
+  background-color: var(--offwhite);
+}
+
+nav .hamburger.active span:nth-of-type(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+nav .hamburger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+nav .hamburger.active span:nth-of-type(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 nav .logo {
   display: inline-block;
   font-size: 25px;
   font-family: var(--mainHeadingFf);
+  background-color: var(--darkGrayBlue);
+  z-index: 4;
 }
 
+nav .logo span {
+  display: inline-block;
+  line-height: var(--headerHeight);
+}
+
+nav li a span,
 nav .logo a {
-  color: var(--darkBlack);
+  color: var(--offwhite);
 }
 
-nav > ul {
-  display: inline-flex;
+nav .menu-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 70vw;
+  height: 100vh;
+  padding: 6rem 0;
+  background-color: var(--darkGrayBlue);
+  overflow-y: auto;
+  visibility: hidden;
+  transform: translate(-100%);
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+@media screen and (min-width: 950px) {
+  nav .menu-container {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding: 0;
+    visibility: visible;
+    transform: none;
+    overflow: visible;
+  }
+}
+
+nav .menu-container.is-open {
+  visibility: visible;
+  transform: translate(0);
+}
+
+nav .menu li {
+  padding: 0 0 0 5rem;
+}
+
+nav .menu li.login-container {
+  height: 40px;
+  display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 950px) {
+  nav .menu li,
+  nav .menu li.login-container {
+    height: inherit;
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+nav .menu li:not(.login-container):hover {
+  color: var(--darkBlack);
+  background-color: var(--midGrayBlue);
+}
+
+nav .menu li span:not(.login) {
+  display: inline-block;
+}
+
+nav .menu li:not(.login-container) a span {
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
+}
+
+@media screen and (min-width: 950px) {
+  nav .menu li:not(.login-container) a span {
+    display: inline-block;
+    padding: 0 1.5rem;
+    line-height: var(--headerHeight);
+  }
+}
+
+nav .menu li span:not(.login) a {
+  height: inherit;
 }
 
 nav .login {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 34px;
+  gap: 0.5rem;
+  color: var(--offwhite);
+}
+
+nav .login {
+  display: inline-flex;
+  align-items: center;
 }
 
 nav .login img {
-  height: 30px;
+  display: inline-block;
+  width: 25px;
 }

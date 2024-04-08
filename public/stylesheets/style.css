@@ -43,7 +43,7 @@ xl: 1280px
   --brightGreen: #35ff8b;
   --lightGrayBlue: #f1f2f7;
   --midGrayBlue: #8b9cc4;
-  --darkBlue: #2a2f3d;
+  --darkGrayBlue: #2a2f3d;
 
   /* Widths, Heights */
   --maxWidthContent: 1200px;
@@ -64,8 +64,16 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: var(--headerHeight);
+  background-color: var(--darkGrayBlue);
+}
+
+main {
+  padding-top: var(--headerHeight);
 }
 
 a {
@@ -98,5 +106,6 @@ h6 {
 .max-content-centered {
   max-width: var(--maxWidthContent);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
