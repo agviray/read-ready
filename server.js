@@ -10,8 +10,9 @@ var methodOverride = require('method-override');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dashboardRouter = require('./routes/dashboard');
-var libraryRouter = require('./routes/library');
 var openedBookRouter = require('./routes/opened-book');
+var libraryRouter = require('./routes/library');
+var accountRouter = require('./routes/account');
 
 require('dotenv').config();
 
@@ -52,6 +53,7 @@ app.use('/users', usersRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/opened-book', openedBookRouter);
 app.use('/library', libraryRouter);
+app.use('/account', accountRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
