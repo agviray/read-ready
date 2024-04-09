@@ -6,15 +6,17 @@
       <h1><%= title %></h1>
       <p>This is the <%= title %></p>
       <div class="books">
-        <% libraryBooks.forEach(({title, image, pages}) => { %>
+        <% libraryBooks.forEach(({title, image, pages, _id}) => { %>
         <article>
           <div class="book">
             <div class="image-wrapper">
               <span class="image-container">
-                <img src="<%= image.src %>" alt="<%= image.src %>" />
+                <img src="<%= image.src %>" alt="<%= image.alt %>" />
               </span>
             </div>
-            <h3><%= title %></h2>
+            <a href="/library/<%= _id %>">
+              <h3><%= title %></h2>
+            </a>
           </div>
         </article>
         <% }) %>

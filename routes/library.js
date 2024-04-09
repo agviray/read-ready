@@ -6,4 +6,6 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 // GET /library
 router.get('/', ensureLoggedIn, libraryCtrl.index);
 
+// Get /library/:id
+router.get('/:id', ensureLoggedIn, libraryCtrl.show);
 module.exports = router;

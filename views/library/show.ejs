@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+
+<main class="max-content-centered">
+  <section>
+    <div class="book">
+      <h1><%= title %></h1>
+      <p>This is the <%= title %></p>
+      <div class="book">
+        <div class="image-container">
+          <img src="<%= book.image.src %>" alt="<%= book.image.alt %>" />
+        </div>
+        <p><%= book.description %></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('../partials/footer.ejs') %>
