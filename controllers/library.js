@@ -6,6 +6,5 @@ module.exports = {
 
 async function index(req, res) {
   const libraryBooks = await LibraryBook.find({});
-  console.log(libraryBooks);
   res.render('library/index', { title: 'Library', libraryBooks });
 }
