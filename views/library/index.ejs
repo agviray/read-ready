@@ -2,7 +2,11 @@
 
 <main class="max-content-centered">
   <h1><%= title %></h1>
-  <p>This is the <%= title %>!</p>
+  <p>This is the <%= title %></p>
+  <% libraryBooks.forEach(({title, image, pages}) => { %>
+  <h2><%= title %></h2>
+  <img src="<%= image.src %>" alt="<%= image.src %>" />
+  <% }) %>
 </main>
 
 <%- include('../partials/footer.ejs') %>
