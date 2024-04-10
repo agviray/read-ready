@@ -6,6 +6,8 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 // GET /library
 router.get('/', ensureLoggedIn, libraryCtrl.index);
 
-// Get /library/:id
+// GET /library/:id
+// - This route is for a single, specific library book
+//   identified by the book's id.
 router.get('/:id', ensureLoggedIn, libraryCtrl.show);
 module.exports = router;

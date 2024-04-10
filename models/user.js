@@ -10,6 +10,12 @@ const userSchema = new Schema(
     },
     email: String,
     avatar: String,
+    myBooks: [
+      {
+        type: Schema.Types.Mixed,
+        ref: 'LibraryBook',
+      },
+    ],
   },
   {
     timestamps: true,

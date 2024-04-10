@@ -3,6 +3,15 @@
 <main class="max-content-centered">
   <h1><%= title %></h1>
   <p>This is the <%= title %>!</p>
+  <section>
+    <div class="my-books">
+      <h2>My Books</h2>
+      <% user.myBooks.map(({title, image}) => { %>
+      <h3><%= title %></h3>
+      <img src="<%= image.src %>" alt="<%= image.alt %>" />
+      <% }) %>
+    </div>
+  </section>
 </main>
 
 <%- include('../partials/footer.ejs') %> <% } %>

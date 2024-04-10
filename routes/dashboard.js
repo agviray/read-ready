@@ -9,4 +9,6 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 // GET dashboard
 router.get('/', ensureLoggedIn, dashboardCtrl.index);
 
+router.post('/:id/my-books', dashboardCtrl.addToMyBooks);
+
 module.exports = router;
