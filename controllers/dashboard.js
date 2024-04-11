@@ -26,18 +26,9 @@ async function addToMyBooks(req, res) {
 }
 
 async function removeFromMyBooks(req, res) {
-  // const user = await User.findById(req.user._id);
-  // const book = await LibraryBook.findById(req.params.id);
-  // const bookId = book._id;
-  // const userId = user._id;
   const user = await User.findById(req.user._id);
-  const book = await LibraryBook.findById(req.params.id);
   const myBooks = user.myBooks;
-  const userId = user._id;
-  const bookId = book._id.toString();
-  // const userId = req.user._id;
-  // const bookId = req.params.id;
-  console.log(myBooks);
+  const bookId = req.params.id;
 
   const newMyBooks = myBooks.filter((book) => {
     if (book._id.toString() !== bookId) {
