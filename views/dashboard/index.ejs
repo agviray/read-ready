@@ -14,10 +14,15 @@
       <% } else { user.myBooks.map(({title, image, _id}) => { %>
       <h3><%= title %></h3>
       <img src="<%= image.src %>" alt="<%= image.alt %>" />
-      <form method="POST" action="/dashboard/my-books/<%= _id %>">
-        <input type="hidden" value="<%= _id %>" />
-        <input type="submit" value="Remove Book" />
-      </form>
+      <div class="my-books-buttons-container">
+        <form method="POST" action="/dashboard/my-books/<%= _id %>">
+          <input type="hidden" value="<%= _id %>" />
+          <input type="submit" value="Remove Book" />
+        </form>
+        <div>
+          <a href="/opened-book/<%= _id %>"><span>Read this Book</span></a>
+        </div>
+      </div>
       <% })} %>
     </div>
   </section>

@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+
+<main class="max-content-centered">
+  <% console.log(book) %>
+  <div class="page-container">
+    <div class="title-page">
+      <h2><%= book.title %></h2>
+      <p><%= book.description %></p>
+    </div>
+  </div>
+  <% book.pages.map(({text, pageNum}) => { %>
+  <div class="page-container">
+    <div class="page-header">
+      <span><%= pageNum %></span>
+    </div>
+    <% if (text.subtitle !== null) { %>
+    <h3><%= text.subtitle %></h3>
+    <% } %> <% text.paragraphs.map(({regular}) => { %>
+    <p><%= regular %></p>
+    <% }) %>
+  </div>
+  <% }) %>
+</main>
+
+<%- include('../partials/footer.ejs') %>
