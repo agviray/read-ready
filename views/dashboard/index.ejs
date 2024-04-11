@@ -6,10 +6,15 @@
   <section>
     <div class="my-books">
       <h2>My Books</h2>
-      <% user.myBooks.map(({title, image}) => { %>
+      <% if (user.myBooks.length === 0) { %>
+      <p>
+        Visit the <a href="/library">Library</a> to add a book to your
+        collection.
+      </p>
+      <% } else { user.myBooks.map(({title, image}) => { %>
       <h3><%= title %></h3>
       <img src="<%= image.src %>" alt="<%= image.alt %>" />
-      <% }) %>
+      <% })} %>
     </div>
   </section>
 </main>
