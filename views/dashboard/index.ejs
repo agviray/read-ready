@@ -11,9 +11,13 @@
         Visit the <a href="/library">Library</a> to add a book to your
         collection.
       </p>
-      <% } else { user.myBooks.map(({title, image}) => { %>
+      <% } else { user.myBooks.map(({title, image, _id}) => { %>
       <h3><%= title %></h3>
       <img src="<%= image.src %>" alt="<%= image.alt %>" />
+      <form method="POST" action="/dashboard/my-books/<%= _id %>">
+        <input type="hidden" value="<%= _id %>" />
+        <input type="submit" value="Remove Book" />
+      </form>
       <% })} %>
     </div>
   </section>

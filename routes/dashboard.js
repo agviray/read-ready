@@ -11,4 +11,6 @@ router.get('/', ensureLoggedIn, dashboardCtrl.index);
 
 router.post('/:id/my-books', dashboardCtrl.addToMyBooks);
 
+router.post('/my-books/:id', dashboardCtrl.removeFromMyBooks);
+
 module.exports = router;
