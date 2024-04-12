@@ -7,9 +7,15 @@
         <span></span>
       </div>
       <span class="logo">
+        <% if (user) { %>
+        <a href="/dashboard">
+          <span> ReadReady </span>
+        </a>
+        <% } else { %>
         <a href="/">
           <span> ReadReady </span>
         </a>
+        <% } %>
       </span>
     </div>
     <div class="menu-container">

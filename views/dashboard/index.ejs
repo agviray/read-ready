@@ -1,42 +1,49 @@
 <% if (user) { %> <%- include('../partials/header.ejs') %>
 
-<main class="max-content-centered">
+<main>
   <section>
-    <div class="dashboard">
+    <div class="dashboard max-content-centered">
       <h2><%= title %></h2>
       <p>Welcome back!</p>
       <section>
         <div class="my-books">
-          <h2>My Books</h2>
+          <div class="header">
+            <h2>My Books</h2>
+          </div>
           <% if (user.myBooks.length === 0) { %>
           <p>
             Visit the <a href="/library">Library</a> to add a book to your
             collection.
           </p>
           <% } else { %>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <% user.myBooks.map(({title, image, _id}) => { %>
-              <div class="swiper-slide">
-                <div class="overlay">
-                  <div class="my-books-buttons-container">
-                    <form method="POST" action="/dashboard/my-books/<%= _id %>">
-                      <input type="hidden" value="<%= _id %>" />
-                      <input type="submit" value="Remove Book" />
-                    </form>
-                    <div>
-                      <a href="/opened-book/<%= _id %>"
-                        ><span class="link-button">Read this Book</span></a
+          <div class="books">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <% user.myBooks.map(({title, image, _id}) => { %>
+                <div class="swiper-slide">
+                  <div class="overlay">
+                    <div class="my-books-buttons-container">
+                      <form
+                        method="POST"
+                        action="/dashboard/my-books/<%= _id %>"
                       >
+                        <input type="hidden" value="<%= _id %>" />
+                        <input type="submit" value="Remove Book" />
+                      </form>
+                      <div>
+                        <a href="/opened-book/<%= _id %>"
+                          ><span class="link-button">Read this Book</span></a
+                        >
+                      </div>
                     </div>
                   </div>
+                  <img src="<%= image.src %>" alt="<%= image.alt %>" />
                 </div>
-                <img src="<%= image.src %>" alt="<%= image.alt %>" />
+                <% }) %>
               </div>
-              <% }) %>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
           <% } %>
         </div>
