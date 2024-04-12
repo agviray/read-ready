@@ -19,7 +19,7 @@ Check out the site [here](https://read-ready-app-b158d51fb48d.herokuapp.com/)!
 ## Screenshots
 
  <p>
-<img src="./images/screenshots/wireframe.png" width="800">
+<img src="./public/images/screenshots/wireframe.png" width="800">
 </p>
 
 <!-- <p>
