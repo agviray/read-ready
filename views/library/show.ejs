@@ -2,23 +2,21 @@
 
 <main class="max-content-centered">
   <section>
-    <div class="book">
-      <h1><%= title %></h1>
-      <p>This is the <%= title %></p>
-      <div class="book">
-        <div class="image-container">
-          <img src="<%= book.image.src %>" alt="<%= book.image.alt %>" />
-        </div>
-        <p><%= book.description %></p>
+    <div class="library-book-container">
+      <div class="image-container">
+        <img src="<%= book.image.src %>" alt="<%= book.image.alt %>" />
       </div>
-      <form
-        class="add-to-my-books-form"
-        method="POST"
-        action="/dashboard/<%= book._id %>/my-books"
-      >
-        <input type="hidden" value="<%= book._id %>" />
-        <input type="submit" value="Add to My Books" />
-      </form>
+      <div class="book-details">
+        <p><%= book.description %></p>
+        <form
+          class="add-to-my-books-form"
+          method="POST"
+          action="/dashboard/<%= book._id %>/my-books"
+        >
+          <input type="hidden" value="<%= book._id %>" />
+          <input type="submit" value="Add to My Books" />
+        </form>
+      </div>
     </div>
   </section>
 </main>

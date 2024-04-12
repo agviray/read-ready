@@ -47,6 +47,7 @@
   background-color: var(--midBlack);
 }
 
+.my-books > p,
 .my-books .books {
   padding: 0 1.5rem;
 }
