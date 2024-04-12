@@ -31,8 +31,7 @@ passport.use(
         // Automatically create ReadReady account details for the new user.
         await AccountDetail.create({
           userGoogleId: user.googleId,
-          firstName: '',
-          lastName: '',
+          name: user.name,
           email: user.email,
         });
         return cb(null, user);

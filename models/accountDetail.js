@@ -3,8 +3,7 @@ const Schema = mongoose.Schema;
 
 const accountSchema = new Schema({
   userGoogleId: String,
-  firstName: String,
-  lastName: String,
+  name: String,
   email: String,
 });
 
