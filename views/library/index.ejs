@@ -3,19 +3,37 @@
 <main class="max-content-centered">
   <section>
     <div class="library">
-      <h1><%= title %></h1>
-      <p>This is the <%= title %></p>
+      <h2><%= title %></h2>
+      <p>Add a book.</p>
       <div class="books">
         <% libraryBooks.forEach(({title, image, pages, _id}) => { %>
-        <article>
-          <div class="book">
+        <article class="book">
+          <div class="overlay-wrapper">
+            <a href="/library/<%= _id %>">
+              <div class="overlay"></div>
+            </a>
+            <div class="quick-buttons-container">
+              <form
+                class="add-to-my-books-form"
+                method="POST"
+                action="/dashboard/<%= _id %>/my-books"
+              >
+                <input type="hidden" value="<%= _id %>" />
+                <input type="submit" value="Quick Add" />
+              </form>
+              <a href="/library/<%= _id %>"
+                ><span class="link-button">View Details</span></a
+              >
+            </div>
+          </div>
+          <div class="content">
             <div class="image-wrapper">
               <span class="image-container">
                 <img src="<%= image.src %>" alt="<%= image.alt %>" />
               </span>
             </div>
             <a href="/library/<%= _id %>">
-              <h3><%= title %></h2>
+              <h3><%= title %></h3>
             </a>
           </div>
         </article>

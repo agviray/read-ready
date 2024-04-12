@@ -46,7 +46,7 @@ xl: 1280px
   --darkGrayBlue: #2a2f3d;
 
   /* Widths, Heights */
-  --maxWidthContent: 1200px;
+  --maxWidthContent: 1400px;
   --headerHeight: 50px;
 }
 
@@ -70,10 +70,13 @@ header {
   right: 0;
   height: var(--headerHeight);
   background-color: var(--darkGrayBlue);
+  z-index: 1;
 }
 
 main {
+  position: relative;
   padding-top: var(--headerHeight);
+  padding-bottom: 80px;
 }
 
 a {
@@ -81,11 +84,35 @@ a {
   text-decoration: none;
 }
 
+p {
+  line-height: 1.5;
+}
+
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   text-indent: 0;
+}
+
+button,
+input[type='submit'],
+.link-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  font-family: var(--globalFf);
+  color: var(--lightBlack);
+  background-color: white;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+input[type='submit'] {
+  border: 1px solid var(--midBlack);
 }
 
 h1 {

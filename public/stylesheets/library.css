@@ -1,23 +1,115 @@
+.library > h2 {
+  padding: 80px 0 1rem 0;
+}
+
+.library > p {
+  padding-bottom: 50px;
+}
+
 .library .books {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 100%));
   column-gap: 1rem;
-  row-gap: 1rem;
+  row-gap: 1.75rem;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .library .books {
+    grid-template-columns: repeat(3, minmax(0, 100%));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .library .books {
+    grid-template-columns: repeat(4, minmax(0, 100%));
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .library .books {
+    grid-template-columns: repeat(5, minmax(0, 100%));
+    grid-template-rows: repeat(5, min-content);
+  }
 }
 
 .library .book {
-  /* position: relative; */
+  position: relative;
+  height: 100%;
+  padding: 0 1rem 1rem 1rem;
+  overflow: hidden;
 }
-.library .book .image-wrapper {
+
+.library .book .overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.library .book .overlay-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0);
+  transition: all 0.2s ease;
+}
+
+.library .book:hover .overlay-wrapper {
+  visibility: visible;
+}
+
+.library .book:hover .overlay-wrapper .overlay {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.library .book:hover .overlay-wrapper .quick-buttons-container {
+  transform: translateY(0);
+}
+.library .quick-buttons-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  transform: translateY(-123px); /* 123px is the button-container height */
+  transition: all 0.3s ease;
+}
+
+.library .quick-buttons-container input[type='submit'],
+.library .quick-buttons-container .link-button {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--midBlack);
+  transition: all 0.2s ease;
+}
+
+.library .quick-buttons-container input[type='submit']:hover,
+.library .quick-buttons-container .link-button:hover {
+  color: white;
+  background-color: var(--midBlack);
+}
+
+.library .book .content .image-wrapper {
   padding-bottom: 1rem;
 }
 
-.library .book .image-container {
+.library .book .content .image-container {
   display: inline-block;
   font-size: 0;
   line-height: 0;
 }
 
-.library .book .image-container img {
+.library .book .content .image-container img {
   width: 100%;
 }
