@@ -1,8 +1,18 @@
 <%- include('./partials/header.ejs') %>
 
-<main class="max-content-centered">
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
-</main>
+<!-- <main> -->
+<div class="home-page">
+  <section>
+    <div class="content">
+      <h1><%= title %></h1>
+      <login-button-container>
+        <a href="/auth/google">
+          <span class="home-link-button link-button"> Log In with Google </span>
+        </a>
+      </login-button-container>
+    </div>
+  </section>
+</div>
+<!-- </main> -->
 
 <%- include('./partials/footer.ejs') %>

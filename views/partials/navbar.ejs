@@ -14,12 +14,12 @@
     </div>
     <div class="menu-container">
       <ul class="menu">
-        <li>
+        <% if (user) {%>
+        <!-- <li>
           <a href="/">
             <span> Home </span>
           </a>
-        </li>
-        <% if (user) {%>
+        </li> -->
         <li>
           <a href="/dashboard">
             <span> Dashboard </span>

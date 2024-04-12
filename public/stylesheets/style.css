@@ -41,6 +41,7 @@ xl: 1280px
   --darkBlack: #0b1215;
   --offwhite: #f9f9f9;
   --brightGreen: #35ff8b;
+  --darkGreen: #155831;
   --lightGrayBlue: #f1f2f7;
   --midGrayBlue: #8b9cc4;
   --darkGrayBlue: #2a2f3d;
@@ -120,6 +121,24 @@ h1 {
   font-family: var(--mainHeadingFf);
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 33px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
 h2,
 h3,
 h4,
@@ -135,4 +154,44 @@ h6 {
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.home-page {
+  min-height: 100vh;
+  background: rgb(139, 156, 196);
+  background: linear-gradient(
+    180deg,
+    rgba(139, 156, 196, 1) 0%,
+    rgba(104, 117, 148, 1) 38%,
+    rgba(42, 47, 61, 1) 100%
+  );
+}
+
+.home-page > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home-page .content {
+  background-color: var(--lightGrayBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  max-width: 600px;
+  padding: 100px 0;
+}
+
+.home-link-button {
+  padding: 1rem 2rem;
+  background-color: var(--brightGreen);
+}
+
+.home-link-button:hover {
+  background-color: var(--darkGreen);
+  color: white;
 }
