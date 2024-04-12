@@ -136,12 +136,12 @@
   padding-bottom: 1.5rem;
 }
 
-input[type='submit'] {
+.library-book-container input[type='submit'] {
   padding: 1rem 2rem;
   background-color: var(--brightGreen);
 }
 
-input[type='submit']:hover {
+.library-book-container input[type='submit']:hover {
   background-color: var(--darkGreen);
   color: white;
 }
