@@ -26,6 +26,12 @@
   transition: all 0.2s ease;
 }
 
+.my-books input[type='submit']:hover,
+.my-books .link-button:hover {
+  color: white;
+  background-color: var(--midBlack);
+}
+
 .swiper-container {
   max-width: 1000px;
 }
