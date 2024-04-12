@@ -1,6 +1,7 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const User = require('../models/user');
+const AccountDetail = require('../models/accountDetail');
 
 passport.use(
   new GoogleStrategy(
@@ -26,6 +27,13 @@ passport.use(
           googleId: profile.id,
           email: profile.emails[0].value,
           avatar: profile.photos[0].value,
+        });
+        // Automatically create ReadReady account details for the new user.
+        await AccountDetail.create({
+          userGoogleId: user.googleId,
+          firstName: '',
+          lastName: '',
+          email: user.email,
         });
         return cb(null, user);
       } catch (error) {
