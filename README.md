@@ -15,7 +15,7 @@ ReadReady is a full-stack, digital reading application.
 
 ## Getting Started
 
-<!-- Check out the site [here]()! -->
+Check out the site [here](https://read-ready-app-allan-vir-p2-c777cc637968.herokuapp.com/)!
 
 ## Screenshots
 
