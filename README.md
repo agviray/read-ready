@@ -15,7 +15,7 @@ ReadReady is a full-stack, digital reading application.
 
 ## Getting Started
 
-Check out the site [here](https://read-ready-app-b158d51fb48d.herokuapp.com/)!
+<!-- Check out the site [here]()! -->
 
 ## Screenshots
 
@@ -23,21 +23,13 @@ Check out the site [here](https://read-ready-app-b158d51fb48d.herokuapp.com/)!
 <img src="/public/images/screenshots/readready-wireframe.png" width="800">
 </p>
 
-<!-- <p>
-<img src="./images/screenshots/cards-dealt.png" width="800">
-</p> -->
-
 ## Next Steps
 
 Future enhancements:
 
-- [ ] Improve entire app UI
-- [ ] Enable Account Detail editing
-- [ ] Add feature to view recently read books
+- [ ] Add CRUD operations in Account Detail
 - [ ] Add a Settings view offering various accessibility options
+- [ ] Improve entire app UI
+- [ ] Add feature to view recently read books
+- [ ] Add feature to bookmark a page
 - [ ] Add a Reminders section
-- [ ] Add ability to bookmark a page
-
-Future fixes:
-
-- [ ] Only apply the hover/show buttons effect on the "main" book in view, in My Books
