@@ -13,7 +13,8 @@
           <% if (user.myBooks.length === 0) { %>
           <p>
             Visit the
-            <a href="/library">Library</a> to add a book to your collection.
+            <a href="/library"><span class="library-link">Library</span></a>
+            to add a book to your collection.
           </p>
           <% } else if (user.myBooks.length <= 2) { %>
           <div class="books">

@@ -9,6 +9,17 @@
   padding-bottom: 50px;
 }
 
+.dashboard .library-link {
+  display: inline-block;
+  padding: 0.15rem 0.35rem;
+  background-color: var(--brightGreen);
+}
+
+.dashboard .library-link:hover {
+  background-color: var(--darkGreen);
+  color: white;
+}
+
 .my-books {
   padding-bottom: 4rem;
   -webkit-box-shadow: 0px 5px 5px 3px rgba(51, 51, 51, 0.3);
