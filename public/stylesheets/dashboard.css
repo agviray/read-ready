@@ -52,10 +52,21 @@
   padding: 0 1.5rem;
 }
 
+.small-book-collection-container,
 .swiper-container {
   max-width: 1000px;
 }
 
+.small-book-collection-container {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+}
+.small-book-collection-container .single-book img {
+  max-width: 100%;
+}
+
+.single-book,
 .swiper-slide {
   position: relative;
   display: inline-flex;
@@ -64,6 +75,7 @@
   align-items: center;
 }
 
+.single-book .overlay,
 .swiper-slide .overlay {
   display: none;
   flex-direction: column;
@@ -77,6 +89,7 @@
   transition: all 0.3s ease;
 }
 
+.single-book:hover .overlay,
 .swiper-slide:hover .overlay {
   display: inline-flex;
   background-color: rgba(51, 51, 51, 0.3);
