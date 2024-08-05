@@ -165,15 +165,18 @@ h6 {
     180deg,
     rgba(139, 156, 196, 1) 0%,
     rgba(104, 117, 148, 1) 38%,
-    rgba(42, 47, 61, 1) 100%
+    rgb(68, 77, 101) 100%
   );
 }
 
 .home-page > section {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .home-page .content {
@@ -186,9 +189,10 @@ h6 {
   width: 80%;
   max-width: 600px;
   padding: 100px 0;
+  z-index: 1;
 }
 
-.home-link-button {
+.home-link-button.link-button {
   padding: 1rem 2rem;
   background-color: var(--brightGreen);
 }
@@ -196,4 +200,23 @@ h6 {
 .home-link-button:hover {
   background-color: var(--darkGreen);
   color: white;
+}
+
+.home-page .bg-image-container {
+  position: absolute;
+  width: 50%;
+  max-width: 375px;
+}
+
+.home-page .bg-image-container.top-left {
+  top: calc(var(--headerHeight) + 50px);
+  left: 0;
+}
+.home-page .bg-image-container.bottom-right {
+  bottom: 20px;
+  right: 0;
+}
+
+.home-page .bg-image-container > img {
+  width: 100%;
 }
