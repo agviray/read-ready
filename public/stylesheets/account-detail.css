@@ -1,0 +1,18 @@
+.account-detail {
+  background-color: var(--lightGrayBlue);
+}
+.account-detail > h2 {
+  padding: 50px 0 1rem 0;
+}
+
+.account-detail article {
+  padding-bottom: 1.5rem;
+}
+
+.account-detail h4 {
+  padding-bottom: 0.75px;
+}
+
+.account-detail span {
+  padding-bottom: 50px;
+}
